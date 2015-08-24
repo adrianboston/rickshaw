@@ -2,16 +2,9 @@
 
 Rickshaw is a JavaScript toolkit for creating interactive time series graphs, developed at [Shutterstock](http://www.shutterstock.com)
 
-This fork in the road adds a click details which was gleaned from (another fine) "Adrian" as outlined in SO http://stackoverflow.com/questions/10490041/onclick-option-for-rickshaw-charting
-General implementation is as follows
+This fork in the road adds a click  event which was gleaned from (another fine) "Adrian" as outlined in SO http://stackoverflow.com/questions/10490041/onclick-option-for-rickshaw-charting
 
- new Rickshaw.Graph.ClickDetail({
-            graph: graph,
-            clickHandler: function(value){
-                alert(value.x + ' ' + value.y);
-            }
-        });
-
+From there you can add alerts or modal dialogs as you see fit; ive used it in Ember with little effort. 
 
 ## Getting Started
 
@@ -31,6 +24,14 @@ var graph = new Rickshaw.Graph( {
   ]
 } );
 
+// Here is the click detail gist
+     new Rickshaw.Graph.ClickDetail({
+            graph: graph,
+            clickHandler: function(value){
+                alert(value.x + ' ' + value.y);
+            }
+        });
+        
 graph.render();
 ```
 See the [overview](http://code.shutterstock.com/rickshaw/), [tutorial](http://shutterstock.github.com/rickshaw/tutorial/introduction.html), and [examples](http://shutterstock.github.com/rickshaw/examples/) for more.
