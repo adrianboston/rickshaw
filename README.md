@@ -2,6 +2,17 @@
 
 Rickshaw is a JavaScript toolkit for creating interactive time series graphs, developed at [Shutterstock](http://www.shutterstock.com)
 
+This fork in the road adds a click details which was gleaned from (another fine) "Adrian" as outlined in SO http://stackoverflow.com/questions/10490041/onclick-option-for-rickshaw-charting
+General implementation is as follows
+
+ new Rickshaw.Graph.ClickDetail({
+            graph: graph,
+            clickHandler: function(value){
+                alert(value.x + ' ' + value.y);
+            }
+        });
+
+
 ## Getting Started
 
 Getting started with a simple graph is straightforward.  Here's the gist:
